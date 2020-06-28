@@ -1,0 +1,19 @@
+[package]
+name = "pyon"
+version = "0.1.0"
+authors = ["Lenqth <nullptr00@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "pyon"
+crate-type = ["cdylib"]
+
+[dependencies]
+csv = "1.1.3"
+serde = "1.0.114"
+serde_json = "1.0.55"
+async-std = "1.6.2"
+
+[dependencies.pyo3]
+version = "0.10.1"
+features = ["extension-module"]
