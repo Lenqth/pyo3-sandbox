@@ -51,6 +51,9 @@ impl PyIterProtocol for RowIterator {
         } else {
             if s.chars().last().unwrap() == '\n' {
                 s.pop();
+                if s.chars().last().unwrap() == '\r' {
+                    s.pop();
+                }
             }
             Ok(Some(s))
         }
